@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Maps</string>
+    <string name="title_activity_opening_page">OpeningPage</string>
+    <string name="service_not_available">servicenot available</string>
+    <string name="no_address_found">no found</string>
+    <string name="address_found">found</string>
+    <string name="invalid_lat_long_used">invalid</string>
+
+    <string name="no_geocoder_available">not</string>
+    <string name="no_location_data_provided">no location</string>
+    <string name="fetch_address">fetch</string>
+    <string name="title_activity_short_distance">ShortDistanceActivity</string>
+</resources>
