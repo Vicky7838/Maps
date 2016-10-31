@@ -1,17 +1,13 @@
 package com.android.vicky.maps;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
@@ -38,9 +34,15 @@ public class ThirdScreen extends AppCompatActivity {
         setContentView(R.layout.activity_short_distance);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ActionBar action=getActionBar();
+
+        //XXX
+       /* ActionBar action=getActionBar();
         action.setDisplayShowCustomEnabled(true);
-        action.setHomeButtonEnabled(true);
+        action.setHomeButtonEnabled(true);*/
+
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
                 int[] r = {R.drawable.car,R.drawable.bus,R.drawable.train,R.drawable.walk};
         String strJson1 = " {\"user\" : [" +
                 "{\"transport\" : \"Car\", " +
