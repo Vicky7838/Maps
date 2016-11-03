@@ -1,6 +1,6 @@
 package com.android.vicky.maps;
-
-import android.Manifest;
+import com.google.android.gms.location.LocationListener;
+        import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -37,7 +36,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class FirstScreen extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.OnConnectionFailedListener,LocationListener {
     String result = null;
     public static final String MAPS = "maps_test";
     static final LatLng TutorialsPoint = new LatLng(21, 57);
@@ -145,7 +144,7 @@ String lat = Double.toString(currentLatitude);
         }
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (location == null) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (com.google.android.gms.location.LocationListener) this);
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
         }
         else {
             handleNewLocation(location);
@@ -195,5 +194,20 @@ String lat = Double.toString(currentLatitude);
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+
+    @Override
+    public void onLocationChanged(Location location) {
+        currentLatitude = location.getLatitude();
+        currentLongitude = location.getLongitude();
+        LatLng latLng = new LatLng(currentLatitude, currentLongitude);
+
+        MarkerOptions options = new MarkerOptions()
+                .position(latLng)
+                .title("I am here!");
+        maps.addMarker(options);
+        float zoom = 16;
+        maps.moveCamera(CameraUpdateFactory.newLatLngZoom((latLng),zoom));
     }
 }
