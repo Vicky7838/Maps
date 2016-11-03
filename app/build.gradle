@@ -8,17 +8,19 @@ android {
             keyPassword 'rahul123'
             storePassword 'rahul123'
         }
+        configDebug {
+        }
     }
     compileSdkVersion 24
     buildToolsVersion "24.0.3"
     defaultConfig {
-        applicationId "com.android.vicky.maps"
+        applicationId "com.edddge.maps.mapmyjourney"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        signingConfig signingConfigs.configRelease
+        signingConfig signingConfigs.configDebug
     }
     buildTypes {
         release {
@@ -30,7 +32,6 @@ android {
         }
         debug {
             jniDebuggable true
-            signingConfig signingConfigs.configRelease
         }
     }
     productFlavors {
@@ -38,10 +39,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     /* androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-                    exclude group: 'com.android.support', module: 'support-annotations'
-                })*/
+                            exclude group: 'com.android.support', module: 'support-annotations'
+                        })*/
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.google.android.gms:play-services-location:9.8.0'
     compile 'com.google.android.gms:play-services-places:9.8.0'

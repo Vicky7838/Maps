@@ -1,23 +1,22 @@
-package com.android.vicky.maps;
+package com.edddge.maps.mapmyjourney;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edddge.maps.mapmyjourney.Modules.DirectionFinder;
+import com.edddge.maps.mapmyjourney.Modules.DirectionFinderListener;
+import com.edddge.maps.mapmyjourney.Modules.Route;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -32,10 +31,6 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.android.vicky.maps.Modules.DirectionFinder;
-import com.android.vicky.maps.Modules.DirectionFinderListener;
-import com.android.vicky.maps.Modules.Route;
 
 public class FouthScreen extends AppCompatActivity implements OnMapReadyCallback, DirectionFinderListener {
 

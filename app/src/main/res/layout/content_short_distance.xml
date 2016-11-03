@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.android.vicky.maps.ThirdScreen"
+    tools:context=".ThirdScreen"
     tools:showIn="@layout/activity_short_distance">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listview1"

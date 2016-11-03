@@ -1,4 +1,4 @@
-package com.android.vicky.maps;
+package com.edddge.maps.mapmyjourney;
 
 /**
  * Created by vicky on 10/24/2016.

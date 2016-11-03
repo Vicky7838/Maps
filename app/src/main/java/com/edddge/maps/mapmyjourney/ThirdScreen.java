@@ -1,4 +1,4 @@
-package com.android.vicky.maps;
+package com.edddge.maps.mapmyjourney;
 
 import android.content.Intent;
 import android.os.Bundle;

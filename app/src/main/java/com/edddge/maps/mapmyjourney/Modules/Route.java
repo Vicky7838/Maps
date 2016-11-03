@@ -1,4 +1,4 @@
-package com.android.vicky.maps.Modules;
+package com.edddge.maps.mapmyjourney.Modules;
 
 import com.google.android.gms.maps.model.LatLng;
 

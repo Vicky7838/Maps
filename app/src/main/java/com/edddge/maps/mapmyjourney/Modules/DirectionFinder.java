@@ -1,4 +1,4 @@
-package com.android.vicky.maps.Modules;
+package com.edddge.maps.mapmyjourney.Modules;
 
 import android.os.AsyncTask;
 
