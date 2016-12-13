@@ -10,4 +10,5 @@
     <string name="no_location_data_provided">no location</string>
     <string name="fetch_address">fetch</string>
     <string name="title_activity_short_distance">ShortDistanceActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
